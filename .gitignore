@@ -1,0 +1,54 @@
+# 排除所有大文件
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.h5
+*.hdf5
+*.npz
+*.npy
+
+# 排除特定的大文件目录
+Data/*.pkl
+feature_extract/*.pt
+feature_extract/Features4Quantum/**/features.pkl
+problem_define/*.pth
+results/**/best_model.pth
+
+# 其他常见文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git/
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 临时文件
+tmp/
+temp/
+*.tmp 
