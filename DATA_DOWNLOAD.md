@@ -4,7 +4,7 @@
 
 ## 需要下载的文件
 
-### 数据集文件 (Data目录)
+### 数据集文件 (Data目录)(自行下载)
 - `Data/meld_data.pkl` (88.28 MB)
 - `Data/meld_data_act.pkl` (71.55 MB)
 - `Data/meld_data_original.pkl` (71.04 MB)
@@ -18,10 +18,10 @@
 - `Data/iemocap_context_test.pkl` (94.00 MB)
 - `Data/iemocap_context_valid.pkl` (87.57 MB)
 
-### 模型文件 (feature_extract目录)
+### 模型文件 (feature_extract目录)(自行下载)
 - `feature_extract/BEATs_iter3_plus_AS2M.pt` (344.75 MB)
 
-### 特征文件 (feature_extract/Features4Quantum目录)
+### 特征文件 (feature_extract/Features4Quantum目录)（下面提供方式）
 - `feature_extract/Features4Quantum/fudan_train/features.pkl` (109.50 MB)
 - `feature_extract/Features4Quantum/fudan_test/features.pkl`
 - `feature_extract/Features4Quantum/fudan_val/features.pkl`
@@ -31,22 +31,9 @@
 
 ## 获取方式
 
-### 方式1: 云存储下载
+### 方式: HuggingFace下载
 请从以下链接下载所需文件：
-- [Google Drive](链接待添加)
-- [百度网盘](链接待添加)
-- [阿里云OSS](链接待添加)
-
-### 方式2: 脚本下载
-运行以下脚本自动下载文件：
-```bash
-python download_data.py
-```
-
-### 方式3: 手动下载
-1. 创建相应的目录结构
-2. 从提供的云存储链接下载文件
-3. 将文件放置到对应的目录中
+https://huggingface.co/datasets/MarvinP/BPSAD
 
 ## 目录结构
 ```
@@ -87,8 +74,3 @@ feature_extract/
 3. 如果使用脚本下载，请确保网络连接稳定
 4. 建议使用断点续传工具下载大文件
 
-## 验证文件
-下载完成后，可以运行以下命令验证文件完整性：
-```bash
-python verify_data.py
-``` 
