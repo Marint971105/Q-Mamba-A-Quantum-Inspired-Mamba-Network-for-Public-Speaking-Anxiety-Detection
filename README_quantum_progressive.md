@@ -143,7 +143,7 @@ python run_quantum_progressive_ablation.py --mode single --model qmamba
 }
 ```
 
-### 增量贡献分析
+### 增量贡献分析（不一定有用）
 
 脚本会自动计算并显示每个量子组件的增量贡献：
 
@@ -157,29 +157,7 @@ QuantumEntanglement   QuantumSuperposition 0.8567     0.0111    1.31%
 QMamba               QuantumEntanglement  0.8678     0.0111    1.30%     
 ```
 
-## 模型修复说明
 
-### 修复内容
-
-1. **BaselineMamba**
-   - 简化了序列处理逻辑
-   - 使用传统L2Norm进行模态融合
-   - 确保输出格式一致性
-
-2. **QuantumSuperposition**
-   - 修复了量子态处理逻辑
-   - 添加了矩阵到向量的转换
-   - 统一了量子态格式
-
-3. **QuantumEntanglement**
-   - 修复了量子纠缠操作
-   - 简化了序列模型处理
-   - 确保维度匹配
-
-4. **QMamba**
-   - 保持原有完整功能
-   - 支持多种权重计算方式
-   - 包含所有量子组件
 
 ### 兼容性
 
@@ -247,12 +225,7 @@ def setup_params():
 如果使用本实验代码，请引用相关论文：
 
 ```bibtex
-@article{qmamba2024,
-  title={Quantum-Inspired Multi-Modal Fusion with Mamba},
-  author={Your Name},
-  journal={arXiv preprint},
-  year={2024}
-}
+waiting
 ```
 
 ## 联系方式
@@ -263,5 +236,4 @@ def setup_params():
 - 参与讨论
 
 ---
-
-**注意**: 本实验代码遵循不修改原始文件的原则，所有新功能都通过新增文件实现。 
+ 
