@@ -1,0 +1,386 @@
+[
+  {
+    "dataset": "fudan",
+    "phase_method": "unified",
+    "weight_method": "attention",
+    "sequence_model": "mamba",
+    "total_params": 316972,
+    "train_time": 146.49684357643127,
+    "test_time": 0.251708984375,
+    "performance": {
+      "acc": 0.6897605705552725,
+      "0": {
+        "precision": 0.7160220994475138,
+        "recall": 0.7543655413271245,
+        "f1-score": 0.7346938775510203,
+        "acc": 0.7543655413271245
+      },
+      "1": {
+        "precision": 0.6465909090909091,
+        "recall": 0.6662763466042154,
+        "f1-score": 0.6562860438292965,
+        "acc": 0.6662763466042154
+      },
+      "2": {
+        "precision": 0.7696629213483146,
+        "recall": 0.5546558704453441,
+        "f1-score": 0.6447058823529411,
+        "acc": 0.5546558704453441
+      },
+      "3": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "macro avg": {
+        "precision": 0.5330689824716843,
+        "recall": 0.493824439594171,
+        "f1-score": 0.5089214509333144,
+        "support": 1963.0,
+        "acc": 0.493824439594171
+      },
+      "weighted avg": {
+        "precision": 0.691471401610843,
+        "recall": 0.6897605705552725,
+        "f1-score": 0.6881368696829965,
+        "support": 1963.0,
+        "acc": 0.6897605705552725
+      },
+      "minority_classes_avg": {
+        "precision": 0.3848314606741573,
+        "recall": 0.2773279352226721,
+        "f1-score": 0.32235294117647056,
+        "acc": 0.2773279352226721
+      }
+    },
+    "config": {
+      "embed_dim": 52,
+      "num_layers": 1,
+      "batch_size": 64,
+      "lr": 0.0005,
+      "epochs": 50,
+      "dataset_name": "features4quantum_fudan"
+    }
+  },
+  {
+    "dataset": "fudan",
+    "phase_method": "unified",
+    "weight_method": "attention",
+    "sequence_model": "transformer",
+    "total_params": 291336,
+    "train_time": 190.52014684677124,
+    "test_time": 0.25973033905029297,
+    "performance": {
+      "acc": 0.6851757514009169,
+      "0": {
+        "precision": 0.6926147704590818,
+        "recall": 0.8079161816065192,
+        "f1-score": 0.7458355722729716,
+        "acc": 0.8079161816065192
+      },
+      "1": {
+        "precision": 0.673972602739726,
+        "recall": 0.5761124121779859,
+        "f1-score": 0.6212121212121212,
+        "acc": 0.5761124121779859
+      },
+      "2": {
+        "precision": 0.6883116883116883,
+        "recall": 0.6437246963562753,
+        "f1-score": 0.6652719665271966,
+        "acc": 0.6437246963562753
+      },
+      "3": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "macro avg": {
+        "precision": 0.513724765377624,
+        "recall": 0.5069383225351951,
+        "f1-score": 0.5080799150030724,
+        "support": 1963.0,
+        "acc": 0.5069383225351951
+      },
+      "weighted avg": {
+        "precision": 0.6829045733963649,
+        "recall": 0.6851757514009169,
+        "f1-score": 0.680341357019792,
+        "support": 1963.0,
+        "acc": 0.6851757514009169
+      },
+      "minority_classes_avg": {
+        "precision": 0.34415584415584416,
+        "recall": 0.32186234817813764,
+        "f1-score": 0.3326359832635983,
+        "acc": 0.32186234817813764
+      }
+    },
+    "config": {
+      "embed_dim": 52,
+      "num_layers": 1,
+      "batch_size": 64,
+      "lr": 0.0005,
+      "epochs": 50,
+      "dataset_name": "features4quantum_fudan"
+    }
+  },
+  {
+    "dataset": "fudan",
+    "phase_method": "unified",
+    "weight_method": "attention",
+    "sequence_model": "cnn",
+    "total_params": 288268,
+    "train_time": 122.02821922302246,
+    "test_time": 0.24512434005737305,
+    "performance": {
+      "acc": 0.4870096790626592,
+      "0": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "1": {
+        "precision": 0.4579278763594734,
+        "recall": 0.936768149882904,
+        "f1-score": 0.6151480199923107,
+        "acc": 0.936768149882904
+      },
+      "2": {
+        "precision": 0.7222222222222222,
+        "recall": 0.631578947368421,
+        "f1-score": 0.6738660907127431,
+        "acc": 0.631578947368421
+      },
+      "3": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "macro avg": {
+        "precision": 0.2950375246454239,
+        "recall": 0.39208677431283123,
+        "f1-score": 0.3222535276762635,
+        "support": 1963.0,
+        "acc": 0.39208677431283123
+      },
+      "weighted avg": {
+        "precision": 0.2900964316351906,
+        "recall": 0.4870096790626592,
+        "f1-score": 0.3524102564847076,
+        "support": 1963.0,
+        "acc": 0.4870096790626592
+      },
+      "minority_classes_avg": {
+        "precision": 0.3611111111111111,
+        "recall": 0.3157894736842105,
+        "f1-score": 0.33693304535637153,
+        "acc": 0.3157894736842105
+      }
+    },
+    "config": {
+      "embed_dim": 52,
+      "num_layers": 1,
+      "batch_size": 64,
+      "lr": 0.0005,
+      "epochs": 50,
+      "dataset_name": "features4quantum_fudan"
+    }
+  },
+  {
+    "dataset": "fudan",
+    "phase_method": "independent",
+    "weight_method": "attention",
+    "sequence_model": "mamba",
+    "total_params": 317284,
+    "train_time": 89.2280821800232,
+    "test_time": 0.2609410285949707,
+    "performance": {
+      "acc": 0.5517065715741213,
+      "0": {
+        "precision": 0.75,
+        "recall": 0.23050058207217694,
+        "f1-score": 0.352626892252894,
+        "acc": 0.23050058207217694
+      },
+      "1": {
+        "precision": 0.4939919893190921,
+        "recall": 0.8665105386416861,
+        "f1-score": 0.629251700680272,
+        "acc": 0.8665105386416861
+      },
+      "2": {
+        "precision": 0.7213930348258707,
+        "recall": 0.5870445344129555,
+        "f1-score": 0.6473214285714286,
+        "acc": 0.5870445344129555
+      },
+      "3": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "macro avg": {
+        "precision": 0.4913462560362407,
+        "recall": 0.4210139137817046,
+        "f1-score": 0.40730000537614863,
+        "support": 1963.0,
+        "acc": 0.4210139137817046
+      },
+      "weighted avg": {
+        "precision": 0.6338783690680054,
+        "recall": 0.5517065715741213,
+        "f1-score": 0.5095139305569695,
+        "support": 1963.0,
+        "acc": 0.5517065715741213
+      },
+      "minority_classes_avg": {
+        "precision": 0.36069651741293535,
+        "recall": 0.2935222672064777,
+        "f1-score": 0.3236607142857143,
+        "acc": 0.2935222672064777
+      }
+    },
+    "config": {
+      "embed_dim": 52,
+      "num_layers": 1,
+      "batch_size": 64,
+      "lr": 0.0005,
+      "epochs": 50,
+      "dataset_name": "features4quantum_fudan"
+    }
+  },
+  {
+    "dataset": "fudan",
+    "phase_method": "independent",
+    "weight_method": "attention",
+    "sequence_model": "transformer",
+    "total_params": 291648,
+    "train_time": 156.49774265289307,
+    "test_time": 0.27016234397888184,
+    "performance": {
+      "acc": 0.6367804381049414,
+      "0": {
+        "precision": 0.7026178010471205,
+        "recall": 0.7811408614668219,
+        "f1-score": 0.7398015435501655,
+        "acc": 0.7811408614668219
+      },
+      "1": {
+        "precision": 0.5744047619047619,
+        "recall": 0.6779859484777517,
+        "f1-score": 0.6219119226638024,
+        "acc": 0.6779859484777517
+      },
+      "2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "3": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "macro avg": {
+        "precision": 0.3192556407379706,
+        "recall": 0.3647817024861434,
+        "f1-score": 0.34042836655349196,
+        "support": 1963.0,
+        "acc": 0.3647817024861434
+      },
+      "weighted avg": {
+        "precision": 0.5573562698757734,
+        "recall": 0.6367804381049414,
+        "f1-score": 0.5942956229569432,
+        "support": 1963.0,
+        "acc": 0.6367804381049414
+      },
+      "minority_classes_avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      }
+    },
+    "config": {
+      "embed_dim": 52,
+      "num_layers": 1,
+      "batch_size": 64,
+      "lr": 0.0005,
+      "epochs": 50,
+      "dataset_name": "features4quantum_fudan"
+    }
+  },
+  {
+    "dataset": "fudan",
+    "phase_method": "independent",
+    "weight_method": "attention",
+    "sequence_model": "cnn",
+    "total_params": 288580,
+    "train_time": 189.67507410049438,
+    "test_time": 0.26143670082092285,
+    "performance": {
+      "acc": 0.47784004075394804,
+      "0": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "1": {
+        "precision": 0.45357941834451904,
+        "recall": 0.949648711943794,
+        "f1-score": 0.6139288417865254,
+        "acc": 0.949648711943794
+      },
+      "2": {
+        "precision": 0.7257142857142858,
+        "recall": 0.5141700404858299,
+        "f1-score": 0.6018957345971563,
+        "acc": 0.5141700404858299
+      },
+      "3": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "acc": 0.0
+      },
+      "macro avg": {
+        "precision": 0.2948234260147012,
+        "recall": 0.36595468810740595,
+        "f1-score": 0.3039561440959204,
+        "support": 1963.0,
+        "acc": 0.36595468810740595
+      },
+      "weighted avg": {
+        "precision": 0.2886440406712419,
+        "recall": 0.47784004075394804,
+        "f1-score": 0.3428239823388642,
+        "support": 1963.0,
+        "acc": 0.47784004075394804
+      },
+      "minority_classes_avg": {
+        "precision": 0.3628571428571429,
+        "recall": 0.25708502024291496,
+        "f1-score": 0.30094786729857814,
+        "acc": 0.25708502024291496
+      }
+    },
+    "config": {
+      "embed_dim": 52,
+      "num_layers": 1,
+      "batch_size": 64,
+      "lr": 0.0005,
+      "epochs": 50,
+      "dataset_name": "features4quantum_fudan"
+    }
+  }
+]
