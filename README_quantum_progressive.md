@@ -6,27 +6,6 @@ This project implements progressive ablation experiments for quantum mechanisms,
 ## Experimental Design
 
 ### Progressive Model Architecture
-
-
-1. **BaselineMamba** - 基线模型
-   - 纯Mamba + 传统L2Norm融合
-   - 不使用任何量子机制
-   - 作为性能基准
-
-2. **QuantumSuperposition** - 量子叠加模型
-   - 基线 + 量子叠加状态建模
-   - 使用相位和振幅构造量子态
-   - 计算外积表示量子叠加
-
-3. **QuantumEntanglement** - 量子纠缠模型
-   - 量子叠加 + 量子纠缠
-   - 使用Hadamard+CNOT实现量子纠缠
-   - 对相邻模态应用CNOT操作
-
-4. **QMamba** - 完整量子模型
-   - 量子纠缠 + 多头注意力融合
-   - 支持attention和magnitude两种权重计算方式
-   - 包含所有量子组件
 1.**BaselineMamba** - Baseline Model
 
 Pure Mamba + traditional L2Norm fusion
