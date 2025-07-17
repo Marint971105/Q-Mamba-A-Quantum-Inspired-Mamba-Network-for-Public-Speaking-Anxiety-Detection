@@ -1,10 +1,9 @@
-# 数据文件下载说明
+# Data File Download Instructions
+Due to GitHub's file size limitations, the following large files are not included in the code repository. Please obtain these files as follows:
+Files to Download
 
-由于GitHub对文件大小有限制，以下大文件不包含在代码仓库中。请按照以下方式获取这些文件：
-
-## 需要下载的文件
-
-### 数据集文件 (Data目录)(自行下载)
+## Files to Download
+### Dataset Files (Data directory) (Download required)
 - `Data/meld_data.pkl` (88.28 MB)
 - `Data/meld_data_act.pkl` (71.55 MB)
 - `Data/meld_data_original.pkl` (71.04 MB)
@@ -18,10 +17,10 @@
 - `Data/iemocap_context_test.pkl` (94.00 MB)
 - `Data/iemocap_context_valid.pkl` (87.57 MB)
 
-### 模型文件 (feature_extract目录)(自行下载)
+### Model Files (feature_extract directory) (Download required)
 - `feature_extract/BEATs_iter3_plus_AS2M.pt` (344.75 MB)
 
-### 特征文件 (feature_extract/Features4Quantum目录)（下面提供方式）
+### Feature Files (feature_extract/Features4Quantum directory) (Download methods provided below)
 - `feature_extract/Features4Quantum/fudan_train/features.pkl` (109.50 MB)
 - `feature_extract/Features4Quantum/fudan_test/features.pkl`
 - `feature_extract/Features4Quantum/fudan_val/features.pkl`
@@ -29,13 +28,13 @@
 - `feature_extract/Features4Quantum/chinese_test/features.pkl`
 - `feature_extract/Features4Quantum/chinese_val/features.pkl`
 
-## 获取方式
+## Download Methods
 
-### 方式: HuggingFace下载
-请从以下链接下载所需文件：
+### Method: HuggingFace Download
+Please download the required files from the following link:
 https://huggingface.co/datasets/MarvinP/BPSAD
 
-## 目录结构
+## Directory Structure
 ```
 Data/
 ├── meld_data.pkl
@@ -68,9 +67,10 @@ feature_extract/
         └── features.pkl
 ```
 
-## 注意事项
-1. 确保下载的文件完整且未损坏
-2. 文件大小应与上述标注的大小一致
-3. 如果使用脚本下载，请确保网络连接稳定
-4. 建议使用断点续传工具下载大文件
+## Important Notes
+
+Ensure downloaded files are complete and uncorrupted
+File sizes should match the sizes noted above
+If using scripts for download, ensure stable network connection
+Recommend using download tools with resume capability for large files
 
