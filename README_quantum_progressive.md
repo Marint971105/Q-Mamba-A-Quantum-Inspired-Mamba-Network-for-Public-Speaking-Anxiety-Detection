@@ -57,8 +57,6 @@ README_quantum_progressive.md
 
 ### 1. Comparison Experiments (Recommended)
 
-运行所有模型的比较实验：
-
 ```bash
 python run_quantum_progressive_ablation.py --mode comparison
 ```
@@ -155,7 +153,7 @@ After experiment completion, the following files will be generated:
 The script will automatically calculate and display incremental contributions of each quantum component:
 
 ### Debug Mode
-Enable verbose logging:调试模式
+Enable verbose logging:
 ```python
 import logging
 logging.basicConfig(level=logging.DEBUG)
@@ -172,7 +170,7 @@ Modify the setup_params() function to adjust experimental parameters:
 ```python
 def setup_params():
     opt = SimpleNamespace(
-        # 修改这些参数
+       
         embed_dim=100,       
         num_layers=2,         
         batch_size=32,        
