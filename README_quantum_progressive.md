@@ -1,10 +1,12 @@
-# 量子渐进式消融实验
+# Quantum Progressive Ablation Experiments
 
-本项目实现了量子机制的渐进式消融实验，通过逐步添加量子组件来验证每个组件的贡献。
 
-## 实验设计
+This project implements progressive ablation experiments for quantum mechanisms, validating the contribution of each component by gradually adding quantum components.
 
-### 渐进式模型架构
+## Experimental Design
+
+### Progressive Model Architecture
+
 
 1. **BaselineMamba** - 基线模型
    - 纯Mamba + 传统L2Norm融合
@@ -25,29 +27,56 @@
    - 量子纠缠 + 多头注意力融合
    - 支持attention和magnitude两种权重计算方式
    - 包含所有量子组件
+1.**BaselineMamba** - Baseline Model
 
-### 实验目标
+Pure Mamba + traditional L2Norm fusion
+No quantum mechanisms used
+Serves as performance baseline
 
-- 验证量子组件的渐进贡献
-- 分析每个量子机制的性能提升
-- 提供量子机制有效性的实验证据
 
-## 文件结构
+2.**QuantumSuperposition** - Quantum Superposition Model
+
+Baseline + quantum superposition state modeling
+Uses phase and amplitude to construct quantum states
+Computes outer products to represent quantum superposition
+
+
+3.**QuantumEntanglement** - Quantum Entanglement Model
+
+Quantum superposition + quantum entanglement
+Uses Hadamard+CNOT to implement quantum entanglement
+Applies CNOT operations to adjacent modalities
+
+
+4.**QMamba** - Complete Quantum Model
+
+Quantum entanglement + multi-head attention fusion
+Supports both attention and magnitude weight calculation methods
+Includes all quantum components
+
+### Experimental Objectives
+
+Validate progressive contributions of quantum components
+Analyze performance improvements of each quantum mechanism
+Provide experimental evidence for quantum mechanism effectiveness
+
+## File Structure
 
 ```
 models/
-├── BaselineMamba.py              # 基线模型
-├── QuantumSuperposition.py       # 量子叠加模型
-├── QuantumEntanglement.py        # 量子纠缠模型
-└── QMamba.py                     # 完整量子模型
+├── BaselineMamba.py              
+├── QuantumSuperposition.py      
+├── QuantumEntanglement.py        
+└── QMamba.py                     
 
-run_quantum_progressive_ablation.py  # 主实验脚本
-README_quantum_progressive.md        # 说明文档
+run_quantum_progressive_ablation.py  
+README_quantum_progressive.md        
 ```
 
-## 使用方法
+## Usage
 
-### 1. 比较实验（推荐）
+
+### 1. Comparison Experiments (Recommended)
 
 运行所有模型的比较实验：
 
@@ -55,70 +84,69 @@ README_quantum_progressive.md        # 说明文档
 python run_quantum_progressive_ablation.py --mode comparison
 ```
 
-这将依次运行：
+This will sequentially run:
 - BaselineMamba
 - QuantumSuperposition  
 - QuantumEntanglement
 - QMamba
 
-### 2. 消融实验
-
-运行消融实验：
+### 2. Ablation Experiments
+Run ablation experiments:
 
 ```bash
 python run_quantum_progressive_ablation.py --mode ablation
 ```
 
-### 3. 单个实验
+### 3. Individual Experiments
 
-运行特定模型的实验：
+Run experiments for specific models:
 
 ```bash
-# 基线模型
+# # Baseline model
 python run_quantum_progressive_ablation.py --mode single --model baseline
 
-# 量子叠加模型
+# Quantum superposition model
 python run_quantum_progressive_ablation.py --mode single --model superposition
 
-# 量子纠缠模型
+# Quantum entanglement model
 python run_quantum_progressive_ablation.py --mode single --model entanglement
 
-# 完整Q-Mamba
+#  Complete Q-Mamba
 python run_quantum_progressive_ablation.py --mode single --model qmamba
 ```
 
-## 实验配置
+## Experimental Configuration
 
-### 默认参数
+### Default Parameters
 
-- **数据集**: CN数据集 (features4quantum)
-- **序列模型**: CNN
-- **嵌入维度**: 50
-- **层数**: 1
-- **批大小**: 64
-- **学习率**: 0.0005
-- **训练轮数**: 50
+**Dataset**: CN dataset (features4quantum)
+**Sequence Model**: CNN
+**Embedding Dimension**: 50
+**Number of Layers**: 1
+**Batch Size**: 64
+**Learning Rate**: 0.0005
+**Training Epochs**: 50
+### Supported Sequence Models
 
-### 支持的序列模型
+All models support the following sequence models:
 
-所有模型都支持以下序列模型：
-- `mamba` - Mamba块
-- `transformer` - Transformer编码器
-- `cnn` - CNN块
-- `rnn` - RNN块
-- `rwkv` - RWKV块
+- `mamba` 
+- `transformer` 
+- `cnn` 
+- `rnn`
+- `rwkv` 
 
-## 输出结果
+## Output Results
 
-### 结果文件
+### Result Files
 
-实验完成后会生成以下文件：
+After experiment completion, the following files will be generated:
 
-1. **比较结果**: `results/quantum_progressive/quantum_progressive_comparison.json`
-2. **消融结果**: `results/quantum_progressive/quantum_ablation_results.json`
-3. **增量贡献**: `results/quantum_progressive/incremental_contributions.json`
+1. **Comparison Results:**: `results/quantum_progressive/quantum_progressive_comparison.json`
+2. **Ablation Results: **: `results/quantum_progressive/quantum_ablation_results.json`
+3. **Incremental Contributions:**: `results/quantum_progressive/incremental_contributions.json`
 
-### 结果格式
+### Result Format
 
 ```json
 {
@@ -143,97 +171,54 @@ python run_quantum_progressive_ablation.py --mode single --model qmamba
 }
 ```
 
-### 增量贡献分析（不一定有用）
+### Incremental Contribution Analysis (Not necessarily useful)
 
-脚本会自动计算并显示每个量子组件的增量贡献：
+The script will automatically calculate and display incremental contributions of each quantum component:
 
-```
-量子组件增量贡献:
---------------------------------------------------------------------------------
-模型                 前一个模型            当前精度    增量      增量%     
---------------------------------------------------------------------------------
-QuantumSuperposition BaselineMamba        0.8456     0.0222    2.70%     
-QuantumEntanglement   QuantumSuperposition 0.8567     0.0111    1.31%     
-QMamba               QuantumEntanglement  0.8678     0.0111    1.30%     
-```
-
-
-
-### 兼容性
-
-- 所有模型都使用相同的输入输出格式
-- 支持相同的序列模型类型
-- 使用统一的参数配置
-
-## 故障排除
-
-### 常见问题
-
-1. **内存不足**
-   - 减小batch_size
-   - 减小embed_dim
-   - 使用更少的层数
-
-2. **训练不收敛**
-   - 调整学习率
-   - 增加训练轮数
-   - 检查数据预处理
-
-3. **模型加载失败**
-   - 确保模型文件完整
-   - 检查设备兼容性
-   - 验证参数配置
-
-### 调试模式
-
-启用详细日志：
-
+### Debug Mode
+Enable verbose logging:调试模式
 ```python
 import logging
 logging.basicConfig(level=logging.DEBUG)
 ```
 
-## 扩展实验
+## Extended Experiments
 
-### 自定义参数
+### Custom Parameters
 
-可以修改`setup_params()`函数来调整实验参数：
+
+Modify the setup_params() function to adjust experimental parameters:
+
 
 ```python
 def setup_params():
     opt = SimpleNamespace(
         # 修改这些参数
-        embed_dim=100,        # 更大的嵌入维度
-        num_layers=2,         # 更多层数
-        batch_size=32,        # 更小的批大小
-        lr=0.001,            # 不同的学习率
-        sequence_model='transformer',  # 不同的序列模型
-        # ... 其他参数
+        embed_dim=100,       
+        num_layers=2,         
+        batch_size=32,        
+        lr=0.001,           
+        sequence_model='transformer', 
+        # ... 
     )
     return opt
 ```
 
-### 添加新模型
+### Adding New Models
 
-1. 创建新的模型类
-2. 继承相同的接口
-3. 在实验脚本中添加模型映射
-4. 更新文档
+Create new model class
+Inherit the same interface
+Add model mapping in experiment script
+Update documentation
 
-## 引用
+## Citation
+If using this experimental code, please cite the relevant paper:
+bibtexwaiting
+Contact
+For questions or suggestions, please contact via:
 
-如果使用本实验代码，请引用相关论文：
-
-```bibtex
-waiting
-```
-
-## 联系方式
-
-如有问题或建议，请通过以下方式联系：
-- 提交Issue
-- 发送邮件
-- 参与讨论
-
+## Submit Issues
+Send emails
+Participate in discussions
 ---
  
